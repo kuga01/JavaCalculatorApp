@@ -1,4 +1,4 @@
-FROM tomcat:8-alpine
+FROM tomcat:8.5-alpine
 
 #FROM lolhens/baseimage-openjre
 
