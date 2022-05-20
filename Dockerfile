@@ -1,4 +1,15 @@
 FROM lolhens/baseimage-openjre
-ADD JavaCalculatorApp.war JavaCalculatorApp.war
-EXPOSE 8081
-ENTRYPOINT ["java", "-jar", "JavaCalculatorApp.war"]
+
+# Working Directory
+WORKDIR /usr/src/javacalculator
+
+# Copy war file into container
+COPY ./JavaCalculatorApp.war ./
+
+# Expose container port
+EXPOSE 3000
+
+# Set directory for volume
+VOLUME /var/lib/javacalculator
+
+ENTRYPOINT ["java", "-jar", "./JavaCalculatorApp.war"]
