@@ -1,4 +1,5 @@
-FROM lolhens/baseimage-openjre
+#FROM lolhens/baseimage-openjre
+FROM tomcat
 
 # Working Directory
 #WORKDIR /usr/src/javacalculator
@@ -13,4 +14,4 @@ EXPOSE 3000
 # Set directory for volume
 VOLUME /var/lib/javacalculator
 
-ENTRYPOINT ["java", "-jar", "JavaCalculatorApp.war"]
+#ENTRYPOINT ["java", "-jar", "JavaCalculatorApp.war"]
