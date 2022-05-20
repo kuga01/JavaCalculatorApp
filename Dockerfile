@@ -4,7 +4,7 @@ FROM lolhens/baseimage-openjre
 WORKDIR /usr/src/javacalculator
 
 # Copy war file into container
-COPY ./JavaCalculatorApp.war ./
+ADD ./JavaCalculatorApp.war ./
 
 # Expose container port
 EXPOSE 3000
