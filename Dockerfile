@@ -1,13 +1,11 @@
-FROM tomcat:8.5-alpine
-
-#FROM lolhens/baseimage-openjre
+FROM lolhens/baseimage-openjre
 
 # Working Directory
-WORKDIR /usr/src/javacalculator
+#WORKDIR /usr/src/javacalculator
 
 # Copy war file into container
 #ADD ./JavaCalculatorApp.war ./
-COPY target/JavaCalculatorApp.war ./JavaCalculatorApp.war
+ADD target/JavaCalculatorApp.war JavaCalculatorApp.war
 
 # Expose container port
 EXPOSE 3000
@@ -15,4 +13,4 @@ EXPOSE 3000
 # Set directory for volume
 VOLUME /var/lib/javacalculator
 
-#ENTRYPOINT ["java", "-jar", "./JavaCalculatorApp.war"]
+ENTRYPOINT ["java", "-jar", "JavaCalculatorApp.war"]
