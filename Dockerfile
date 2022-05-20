@@ -5,7 +5,7 @@ FROM lolhens/baseimage-openjre
 
 # Copy war file into container
 #ADD ./JavaCalculatorApp.war ./
-ADD target/JavaCalculatorApp.war JavaCalculatorApp.war
+ADD JavaCalculatorApp/target/JavaCalculatorApp.war JavaCalculatorApp.war
 
 # Expose container port
 EXPOSE 3000
