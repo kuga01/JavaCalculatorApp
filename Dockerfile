@@ -15,4 +15,4 @@ EXPOSE 8080
 # Set directory for volume
 VOLUME /var/lib/javacalculator
 
-CMD ["catalina.sh", "run"]
+#CMD ["catalina.sh", "run"]
