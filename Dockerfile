@@ -1,13 +1,13 @@
-#FROM lolhens/baseimage-openjre
-FROM tomcat:8.5.47-jdk8-openjdk
+#FROM tomcat:8.5.47-jdk8-openjdk
+FROM tomcat:9
 
 # Working Directory
 WORKDIR /usr/src/javacalculator
 
 # Copy war file into container
 #ADD ./JavaCalculatorApp.war ./
-#ADD JavaCalculatorApp/target/JavaCalculatorApp.war JavaCalculatorApp.war
-COPY JavaCalculatorApp/target/JavaCalculatorApp.war ./JavaCalculatorApp.war
+ADD JavaCalculatorApp/target/JavaCalculatorApp.war JavaCalculatorApp.war
+#COPY JavaCalculatorApp/target/JavaCalculatorApp.war ./JavaCalculatorApp.war
 
 # Expose container port
 EXPOSE 8080
