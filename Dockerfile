@@ -1,5 +1,5 @@
 #FROM lolhens/baseimage-openjre
-FROM bitnami/tomcat:9.0
+FROM tomcat:8.5.47-jdk8-openjdk
 
 # Working Directory
 WORKDIR /usr/src/javacalculator
@@ -7,12 +7,12 @@ WORKDIR /usr/src/javacalculator
 # Copy war file into container
 #ADD ./JavaCalculatorApp.war ./
 #ADD JavaCalculatorApp/target/JavaCalculatorApp.war JavaCalculatorApp.war
-COPY JavaCalculatorApp/target/JavaCalculatorApp.war ./
+COPY JavaCalculatorApp/target/JavaCalculatorApp.war ./JavaCalculatorApp.war
 
 # Expose container port
-EXPOSE 3000
+EXPOSE 8080
 
 # Set directory for volume
 VOLUME /var/lib/javacalculator
 
-#ENTRYPOINT ["java", "-jar", "JavaCalculatorApp.war"]
+CMD ["catalina.sh", "run"]
