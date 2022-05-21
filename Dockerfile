@@ -1,13 +1,9 @@
-#FROM tomcat:8.5.47-jdk8-openjdk
-#FROM i386/tomcat:9-jre8-alpine
 FROM tomcat:8
 
 # Working Directory
 WORKDIR /usr/local/tomcat/webapps
 
 # Copy war file into container
-#ADD ./JavaCalculatorApp.war ./
-#ADD JavaCalculatorApp/target/JavaCalculatorApp.war JavaCalculatorApp.war
 COPY JavaCalculatorApp/target/JavaCalculatorApp.war ./JavaCalculatorApp.war
 
 # Expose container port
