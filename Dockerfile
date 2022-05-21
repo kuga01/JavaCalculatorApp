@@ -1,8 +1,9 @@
-FROM tomcat:8.5.47-jdk8-openjdk
+#FROM tomcat:8.5.47-jdk8-openjdk
 #FROM i386/tomcat:9-jre8-alpine
+FROM tomcat:8
 
 # Working Directory
-WORKDIR /usr/src/javacalculator
+WORKDIR /usr/local/tomcat/webapps
 
 # Copy war file into container
 #ADD ./JavaCalculatorApp.war ./
