@@ -1,5 +1,5 @@
 #FROM lolhens/baseimage-openjre
-FROM tomcat:8.5.47-jdk8-openjdk-alpine
+FROM tomcat:8.5.47-jdk8-openjdk
 
 # Working Directory
 WORKDIR /usr/src/javacalculator
