@@ -1,0 +1,17 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: sporttrade-app
+    k8s-app: sporttrade-app
+  name: sporttrade-app
+spec:
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+    targetPort: 8080
+  type: LoadBalancer #ClusterIP # LoadBalancer # NodePort
+  selector:
+    app: sporttrade-app
