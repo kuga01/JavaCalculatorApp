@@ -1,5 +1,5 @@
-#FROM tomcat:8.5.47-jdk8-openjdk
-FROM i386/tomcat:9-jre8-alpine
+FROM tomcat:8.5.47-jdk8-openjdk
+#FROM i386/tomcat:9-jre8-alpine
 
 # Working Directory
 WORKDIR /usr/src/javacalculator
@@ -10,7 +10,7 @@ WORKDIR /usr/src/javacalculator
 COPY JavaCalculatorApp/target/JavaCalculatorApp.war ./JavaCalculatorApp.war
 
 # Expose container port
-EXPOSE 8080
+EXPOSE 3000
 
 # Set directory for volume
 VOLUME /var/lib/javacalculator
