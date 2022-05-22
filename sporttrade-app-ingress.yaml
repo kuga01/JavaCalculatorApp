@@ -16,7 +16,7 @@ spec:
           serviceName: sporttrade-app
           servicePort: 80
         path: /my-sporttrade-app(/|$)(.*)
-  - host: a4f8ce0f7cf234be599cfbfb6eccac7a-1308475933.us-east-1.elb.amazonaws.com  # change the IP address here
+  - host: abaccff0e7a8c41088713f27d465b090-2078281724.us-east-1.elb.amazonaws.com  # change the IP address here
     http:
       paths:
       - backend:
